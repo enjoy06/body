@@ -49,13 +49,13 @@ var lastResponse = '';
 setInterval(function(){ 
   $.ajax({
     type: "GET",
-    url: "https://greasiest-depositio.000webhostapp.com/check.php",
+    url: "https://greasiest-depositio.000webhostapp.com/data.php",
     dataType: "html",
     success: function(response) {
       if (lastResponse && response !== lastResponse) {
         var audio = document.getElementById('jaran');
         audio.play();
-        $("#iyo").load("https://greasiest-depositio.000webhostapp.com/check.php");
+        $("#iyo").load("https://greasiest-depositio.000webhostapp.com/data.php");
       }
       lastResponse = response
     }
@@ -63,7 +63,7 @@ setInterval(function(){
 }, 2000);
 
 $(document).ready(function(){
-    $("#iyo").load("https://greasiest-depositio.000webhostapp.com/check.php");
+    $("#iyo").load("https://greasiest-depositio.000webhostapp.com/data.php");
 });
 </script>
 <br></br>
